@@ -1,0 +1,102 @@
+name: plugin
+display_name: plugin
+contributions:
+  commands:
+    - id: plugin.get_reader
+      python_name: plugin._reader:napari_get_reader
+      title: Open data with plugin
+    - id: plugin.offset
+      python_name: plugin._widget:register_images
+      title: Register Images
+    - id: plugin.contrast
+      python_name: plugin._widget:adjust_contrast
+      title: Register Images
+    - id: plugin.set_contrast
+      python_name: plugin._widget:set_contrast
+      title: Set Contrast
+    - id: plugin.calc_target_rate
+      python_name: plugin._widget:calculate_target_rate
+      title: Register Images
+    - id: plugin.convert_shapes_to_labels
+      python_name: plugin._widget:shapes2labels
+      title: Shapes2Labels
+    - id: plugin.contours
+      python_name: plugin._widget:draw_contours
+      title: Shapes2Labels
+    - id: plugin.target_intensity
+      python_name: plugin._widget:calculate_target_intensity
+      title: Calculate Target Intensity
+    - id: plugin.slider
+      python_name: plugin._widget:ExampleQWidget
+      title: Slider
+    - id: plugin.segmentation
+      python_name: plugin._widget:stardist_segmentation
+      title: Stardist Segmentation
+    - id: plugin.antibody_intensity
+      python_name: plugin._widget:calculate_antibody_intensity
+      title: Antibody intensity
+    - id: plugin.antibody_pixel_intensity
+      python_name: plugin._widget:antibody_pixel_intensity
+      title: Antibody pixel intensity
+    - id: plugin.timeseries_pixel_intensity
+      python_name: plugin._widget:timeseries_pixel_intensity
+      title: Timeseries Pixel Intensity
+    - id: plugin.denoise
+      python_name: plugin._widget:denoise
+      title: Denoise
+    - id: plugin.stardist_segmentation_twochannel
+      python_name: plugin._widget:stardist_segmentation_twochannel
+      title: Twochannel Segmentation
+    - id: plugin.antibody_pixel_intensity_twochannel
+      python_name: plugin._widget:antibody_pixel_intensity_twochannel
+      title: antibody_pixel_intensity_twochannel
+    - id: plugin.colocalization
+      python_name: plugin._widget:colocalization
+      title: colocalization
+    - id: plugin.polygons
+      python_name: plugin._widget:polygons
+      title: polygons
+    - id: plugin.zebrafish
+      python_name: plugin._widget:zebrafish
+      title: zebrafish
+  readers:
+    - command: plugin.get_reader
+      accepts_directories: false
+      filename_patterns: ['*.npy', "*nd2", "*czi"]
+  widgets:
+   - command: plugin.offset
+     display_name: Register Images
+   - command: plugin.contrast
+     display_name: Adjust Contrast   
+   - command: plugin.set_contrast
+     display_name: Set Contrast   
+   - command: plugin.calc_target_rate
+     display_name: Calculate Target Rate
+   - command: plugin.convert_shapes_to_labels
+     display_name: Shapes2Labels
+   - command: plugin.contours
+     display_name: Draw Contours
+   - command: plugin.target_intensity
+     display_name: Calculate Target Intensity
+   - command: plugin.slider
+     display_name: Slider
+   - command: plugin.segmentation
+     display_name: Stardist Segmentation
+   - command: plugin.antibody_intensity
+     display_name: Antibody Intensity
+   - command: plugin.antibody_pixel_intensity
+     display_name: Antibody pixel Intensity
+   - command: plugin.timeseries_pixel_intensity
+     display_name: Timeseries pixel Intensity   
+   - command: plugin.denoise
+     display_name: Denoise   
+   - command: plugin.stardist_segmentation_twochannel
+     display_name: Twochannel Segmentation
+   - command: plugin.antibody_pixel_intensity_twochannel
+     display_name: antibody_pixel_intensity_twochannel
+   - command: plugin.colocalization
+     display_name: colocalization
+   - command: plugin.polygons
+     display_name: polygons
+   - command: plugin.zebrafish
+     display_name: zebrafish
